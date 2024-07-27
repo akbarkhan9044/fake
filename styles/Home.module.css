@@ -1,0 +1,136 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 20px;
+}
+
+
+.card{
+    height: 200px;
+    width: 200px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-color: white;
+    color: white;
+
+}
+
+.card:hover .image{
+    animation-name:imageAnime;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes imageAnime {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+
+
+
+.h1{
+    position: relative;
+    font-weight: 500;
+    font-size: 35px;
+    max-width: 350px;
+    color: lightseagreen;
+}
+
+.h1::after{
+    content: "";
+    height: 5px;
+    background-color: rgb(147, 179, 177);
+    position: absolute;
+    bottom:0;
+    left: 0;
+
+   
+}
+
+.h1:hover::after{
+    animation-name: line;
+    animation-duration: 1s;
+}
+
+
+
+@keyframes line {
+    0%{
+        left: 0;
+        width: 0;
+    }
+    50%{
+        width: 80%;
+        left: 0%;
+    }
+    100%{
+        width: 0;
+        left: 80%;
+    }
+    
+}
+
+.banner{
+    background: url(https://cdn.sanity.io/images/qa41whrn/staging/5c65107ae7b9effa38e60d2ba6674d9efe16ac86-2880x1040.jpg?w=2160&q=80&auto=format) no-repeat center center ;
+    background-size: cover;
+    height: 500px;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+.content{
+    position: absolute;
+    top:20%;
+    left: 5%;
+    height: 200px;
+    width: 100%;
+    color: white;
+    z-index: 2;
+}
+.content h1{
+    font-size: 40px;
+}
+.content p{
+    margin-left: 50px;
+}
+.content button{
+    padding: 0.5rem 0.9rem;
+    text-transform: uppercase;
+   margin-left: 50px;
+   font-size: 20px;
+}
+.mainContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:1rem;
+    margin-top: 2rem;
+}
+.item{
+    border: 2px solid white;
+    color: white;
+    height: 300px;
+    width: 100%;
+    text-align: center;
+}
+
+.second{
+    background: url(https://cdn.sanity.io/images/qa41whrn/staging/835e2c9edd18352e6299896812493d090d7a67a9-1440x500.jpg?w=2160&q=80&auto=format) no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    width: 100vw;
+    background-size: cover;
+}
+
+
